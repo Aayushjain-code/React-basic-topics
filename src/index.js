@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
+
+
+function Greeting() {
+  return <h4>This is Aayush</h4>
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Greeting />
   </React.StrictMode>,
   document.getElementById('root')
 );
