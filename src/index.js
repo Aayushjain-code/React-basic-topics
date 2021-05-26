@@ -1,16 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from './App';
 
 
-
-function Greeting() {
-  return <h4>This is Aayush</h4>
+function BookList() {
+  return (
+    <section>
+      <Person />
+      <Message />
+    </section>
+  )
 }
 
+const Person = () => <h2>John Doe</h2>;
+
+const Message = () => {
+  return <p>This is a Message</p>
+}
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <Greeting />
-  </React.StrictMode>,
+  <>
+    <BookList />
+  </>,
   document.getElementById('root')
 );
