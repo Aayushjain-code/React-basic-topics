@@ -1,37 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//css
 import './index.css';
-import App from './App';
+//setup vars
+const author = "John Doe";
+const title = "I love You to the moon and Backssss!"
+const image = "https://images-na.ssl-images-amazon.com/images/I/91JhcC33dTL.__AC_SX300_SY300_QL70_FMwebp_.jpg";
+
 
 
 function BookList() {
   return (
     <section className="bookList">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book job="developer" />
+      <Book title="randome title" number={22} />
+
     </section>
   )
 }
-//const can be declared out
-const author = "John Doe";
 
-const Book = () => {
-  //const can be declared in
-  const title = "I love You to the moon and Backssss!"
-
+const Book = (props) => {
+  console.log(props);
   return (
     <article className="book">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/91JhcC33dTL.__AC_SX300_SY300_QL70_FMwebp_.jpg" />
+      <img src={image} />
+
       <h1>{title}</h1>
-      <h4 >{author.toUpperCase()}</h4>
-      {/* jsx me object pass krna padta hai to return something */}
-      {/* <p>{let x = 6}</p> */}
-      <p>{6 + 6}</p>
+
+      <h4 >{author}</h4>
+
+      <p>{props.job}</p>
+      <p>{props.title}</p>
+      <p>{props.number}</p>
+
     </article>
   )
 }
