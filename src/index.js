@@ -34,7 +34,7 @@ const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/9
 const Title = () => <h1>This is the Title</h1>;
 
 function Author() {
-  return <h4>John Doe</h4>
+  return <h4 style={{ color: "red", fontSize: "0.75rem", marginTop: "0.25rem" }}>John Doe</h4>
 }
 
 
