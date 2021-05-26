@@ -30,8 +30,9 @@ function BookList() {
         image={firstBook.image}
         title={firstBook.title}
         author={firstBook.author}
-      />
-
+      >
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facilis quos dolores omnis excepturi nisi aliquam sed! Itaque, quae quos?</p>
+      </Book>
       <Book
         image={SecondBook.image}
         title={SecondBook.title}
@@ -41,17 +42,20 @@ function BookList() {
   )
 }
 
-const Book = ({ image, title, author }) => {
+const Book = (props) => {
   // console.log(props);
-  // const { image, title, author } = props;
+  const { image, title, author, children } = props;
   //destructurning means we just break an object into its small components to to call
   //them easily  { image, title, author:{} }
 
   return (
     <article className="book">
       <img src={image} />
+
       <h1>{title}</h1>
+
       <h4 >{author}</h4>
+      {children}
 
       {/* <p>{props.job}</p>
       <p>{props.title}</p>
