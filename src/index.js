@@ -32,7 +32,7 @@ function BookList() {
         return (
           <Book
             key={book.id}
-            book={book}
+            {...book}
           ></Book>
         )
       })}
@@ -40,8 +40,9 @@ function BookList() {
   )
 }
 
-const Book = (props) => {
-  const { image, title, author } = props.book;
+const Book = ({ image, title, author }) => {
+  // console.log(props);
+  // const { image, title, author } = props.book;
   return (
     <article className="book">
       <img src={image} />
