@@ -6,18 +6,37 @@ import App from './App';
 
 function BookList() {
   return (
-    <section>
-      <Person />
-      <Message />
+    <section className="bookList">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
     </section>
   )
 }
 
-const Person = () => <h2>John Doe</h2>;
 
-const Message = () => {
-  return <p>This is a Message</p>
+const Book = () => {
+  return <article className="book">
+    <Image />
+    <Title />
+    <Author />
+  </article>
 }
+
+
+const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/91JhcC33dTL.__AC_SX300_SY300_QL70_FMwebp_.jpg" />
+
+
+const Title = () => <h1>This is the Title</h1>;
+
+function Author() {
+  return <h4>John Doe</h4>
+}
+
 
 
 ReactDOM.render(
